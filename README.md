@@ -6,13 +6,18 @@
 
 # Table of Contents
 
-- [About](#about)
-- [Installation](#installation)
+- [Django Periodic Table](#django-periodic-table)
+- [Table of Contents](#table-of-contents)
+  - [About](#about)
+    - [Element Classification](#element-classification)
+    - [Element groups](#element-groups)
+    - [Element periods](#element-periods)
+  - [Installation](#installation)
     - [Get Django](#get-django)
     - [Clone the repo](#clone-the-repo)
     - [Activate app](#activate-app)
-    - [Migrate the database](#migrate-database)
-- [Roadmap dev](#roadmap-dev)
+    - [Migrate the database](#migrate-the-database)
+  - [Roadmap dev](#roadmap-dev)
 
 ## About
 
@@ -82,12 +87,16 @@ Place the app folder in your Django installation's main directory, and add *djan
 ### Migrate the database
 
 Executing the command
-```
-./manage by migrate
+```bash
+# ./manage by migrate  # deprecated !!!
+python manage.py migrate
 ```
 will create the necessary database structures and should import the required data from the fixtures. If the data does not import, you can make that happen with
-```
-./manage.py loaddata django_periodic_table/fixtures/initial_data.json
+
+```bash
+#./manage.py loaddata django_periodic_table/fixtures/initial_data.json
+python manage.py migrate --run-syncdb
+python manage.py loaddata django_periodic_table/fixtures/initial_data.json
 ```
 
 ## Roadmap dev
