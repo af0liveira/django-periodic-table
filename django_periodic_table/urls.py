@@ -1,7 +1,7 @@
 """django_periodic_table URL Configuration"""
-from django.conf.urls import url
+from django.urls import path
 from .views import IndexView
 
 urlpatterns = [
-    url(r'', IndexView.as_view(), name="periodic_table"),
+    path(r'', IndexView.as_view(), name="periodic_table"),
 ]

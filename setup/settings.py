@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pte',
+    'django_periodic_table',
 ]
 
 MIDDLEWARE = [
